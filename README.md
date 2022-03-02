@@ -20,6 +20,7 @@ window sliding algorithm 은 numpy 라이브러리에서 구현이 되어있다.
 ```python
 aa = np.arange(20).reshape(1,4,5)
 np.lib.stride_tricks.sliding_window_view(aa, (2,2), axis=(1,2)).shape
+>> (1,3,4,2,2)
 ```
 
 ---
