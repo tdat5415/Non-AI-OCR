@@ -41,6 +41,7 @@ def shift_window_pred(crop_imgs, images): # (3, h+20, w+20), (10, h, w)
     return pred_nums
 ```
 패딩한 crop이미지들과 사전이미지를 입력하면 예측된 숫자들이 나온다.
+numpy의 broadcasting 기능을 적극 활용하였다.
 
 ---
 
