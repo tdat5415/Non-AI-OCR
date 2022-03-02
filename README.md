@@ -41,7 +41,7 @@ def shift_window_pred(crop_imgs, images): # (3, h+20, w+20), (10, h, w)
     pred_nums = np.argmin(temp, axis=-1)
     return pred_nums
 ```
-패딩한 crop이미지들과 사전이미지를 입력하면 예측된 숫자들이 나온다.
+패딩한 crop이미지들과 사전이미지를 입력하면 예측된 숫자들이 나온다.  
 numpy의 broadcasting 기능을 적극 활용하였다.
 
 ---
@@ -102,7 +102,9 @@ while cap.isOpened():
 cap.release()
 cv2.destroyAllWindows()
 ```
-이미지의 preprocessing 코드가 담겨있다.
+이미지의 preprocessing 코드가 담겨있다.  
+위에 이미지 resize하는 부분이 있는데 numpy는 rectangle 형태의 데이터만 가능하기 때문에 적용한 것이다.  
+resize보다는 패딩후 이미지를 일부 잘라서 크기를 맞추는 방법이 바람직하다.
 
 ---
 
